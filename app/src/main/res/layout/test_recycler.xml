@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="130dp"
+    android:layout_height="260dp"
+    android:orientation="vertical"
+    android:padding="4dp">
+    <ImageView
+        android:id="@+id/imgPoster"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/shiraz" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/concrete"
+        android:textSize="16sp"
+        tools:text="Matrix" />
+    <TextView
+        android:id="@+id/txtDirector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/concrete"
+        android:textSize="12sp"
+        tools:text="Matrix" />
+
+
+    <TextView
+        android:id="@+id/txtYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/concrete"
+        android:textSize="12sp"
+        tools:text="2017" />
+
+
+</LinearLayout>

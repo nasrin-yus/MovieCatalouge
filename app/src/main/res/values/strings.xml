@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="Search_Your_favourite_Movie">Search Your favourite Movie:</string>
+    <string name="results">i.g. Matrix</string>
+    <string name="search">Search</string>
+    <string name="Add_To_My_Favourit">Add to my favourit</string>
+    <string name="Show_My_Favourit_Movie">favourit movies</string>
+
+
+
+</resources>
