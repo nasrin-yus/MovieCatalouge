@@ -26,14 +26,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
-    RecyclerView rvMovies;
+    RecyclerView rvMovies,rvFavorits;
     EditText edtSearch;
     Button btnSearch,btnShowMyFavourit;
     ArrayList<String> MTitle,MYear,MDirector,MPoster,imdbID_Sh_Movie;
+    String idOMDb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,12 +48,27 @@ public class MainActivity extends AppCompatActivity {
         MPoster = new ArrayList<>();
         imdbID_Sh_Movie=new ArrayList<>();
 
-       setContentView(R.layout.activity_main);
+
+
+        setContentView(R.layout.activity_main);
        //findviewbyid
        edtSearch=findViewById(R.id.edtSearch);
        btnSearch=findViewById(R.id.btnSearch);
        rvMovies=findViewById(R.id.rvMovies);
+       rvFavorits=findViewById(R.id.rvFavorits);
+       btnShowMyFavourit=findViewById(R.id.btnShowMyFavourit);
 
+
+       //show favorite
+        btnShowMyFavourit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              Intent intent = new Intent(MainActivity.this, ShowFavoriteActivity.class);
+                //intent.putExtra("idOMDb",idOMDb);
+               startActivity(intent);
+
+            }
+        });
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
 

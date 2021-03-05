@@ -30,12 +30,14 @@ public class MovieAdapter extends RecyclerView.Adapter<TestViewHolder> {
            }
 
     @NonNull
+
     @Override
     public TestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.test_recycler, parent, false);
         TestViewHolder holder = new TestViewHolder(v);
         return holder;
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull TestViewHolder holder, int position) {

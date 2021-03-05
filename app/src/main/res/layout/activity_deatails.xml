@@ -154,6 +154,19 @@
                 android:textSize="16sp"
                 android:background="@drawable/circle"
                 android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtFImageLink"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:text="2021"
+                android:padding="2dp"
+                android:paddingStart="5dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:textSize="5sp"
+                />
+
 
         </LinearLayout>
 

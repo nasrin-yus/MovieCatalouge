@@ -47,18 +47,23 @@ public class Activity_deatails extends AppCompatActivity {
         txtwriters=findViewById(R.id.txtwriters);
         txtlanguage=findViewById(R.id.txtlanguage);
         btnAddFavourit=findViewById(R.id.btnAddFavourit);
-//insert into table
-        SqLiteHelper helper = new SqLiteHelper(Activity_deatails.this, "MovieCatalouge", null, 1);
+        TextView dImage_link = findViewById(R.id.txtFImageLink);
+
+
+        //insert into table
+        SqLiteHelper helper = new SqLiteHelper(Activity_deatails.this, "MovieTable", null, 1);
 
         btnAddFavourit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               // String id=IdOMDb;
                 String Title = txtTitle.getText().toString();
                 String Year = txtYear.getText().toString();
                 String Director = txtDirector.getText().toString();
                 String Language = txtlanguage.getText().toString();
-                String Poster = imgPoster.getTag().toString();
-                helper.insertIntoMovieTable(Title,Year,Director,Language,IdOMDb,Poster);
+                String Poster = dImage_link.getText().toString();
+
+                helper.insertIntoMoviesTable(Title,Year,Director,IdOMDb,Poster);
                 Toast.makeText(Activity_deatails.this, " Movie Saved", Toast.LENGTH_SHORT).show();
             }
         });
@@ -87,6 +92,8 @@ public class Activity_deatails extends AppCompatActivity {
                 txtYear.setText(detailsModel.getYear());
                 txtplot.setText(detailsModel.getPlot());
                 Picasso.get().load(detailsModel.getPoster()).fit().into(imgPoster);
+                dImage_link.setText(detailsModel.getPoster().toString());
+
 
 
             }
